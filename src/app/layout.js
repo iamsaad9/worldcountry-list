@@ -3,7 +3,7 @@ import "./globals.css";
 import Providers from "./components/providers";
 
 const be_vietnam_pro = Be_Vietnam_Pro({
-  subsets: ["400"],
+  subsets: ["latin"],
   weight: "400",
 });
 
