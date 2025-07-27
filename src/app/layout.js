@@ -1,14 +1,10 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
+import Providers from "./components/providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const be_vietnam_pro = Be_Vietnam_Pro({
+  subsets: ["400"],
+  weight: "400",
 });
 
 export const metadata = {
@@ -19,10 +15,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${be_vietnam_pro.className} antialiased`}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
